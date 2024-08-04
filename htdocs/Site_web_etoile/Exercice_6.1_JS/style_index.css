@@ -1,0 +1,115 @@
+/* ---------------STYLE DES TABLES ---------------*/
+table {
+  border-collapse: collapse;
+  margin: auto;
+  border: 1px solid black;
+}
+/* ---------------FOND DE LA PAGE ---------------*/
+body
+{
+	background-color: #e3ebfa ;
+}
+
+/* --------------- TABLEAU ---------------*/
+td, th {
+  border: 1px solid black; /* Ajoute des bordures aux cellules */
+  padding: 8px; /* Ajoute une marge intérieure pour l'espace */
+}
+
+th {
+  background-color: rgba(128, 0, 128, 0.5);
+}
+
+
+/* ---------------STYLE DES TITRES DE LA PAGE--------------- */
+h1 /* titre */ {
+  font-family:Arial, Helvetica, sans-serif;
+  color: #FF6600; 
+  text-align: center;
+  text-shadow: 6px 6px 15px orange;
+  background-image: url('image/nebuleuse.jpg');
+  padding: 40px;
+}
+/* ---------------STYLE DES TABLES ---------------*/
+table {
+  border-collapse: collapse;
+  margin: auto;
+  border: 1px solid black;
+}
+/* ---------------FOND DE LA PAGE ---------------*/
+body
+{
+	background-color: #e3ebfa ;
+}
+
+/* --------------- TABLEAU ---------------*/
+td, th {
+  border: 1px solid black; /* Ajoute des bordures aux cellules */
+  padding: 8px; /* Ajoute une marge intérieure pour l'espace */
+}
+
+th {
+  background-color: rgba(128, 0, 128, 0.5);
+}
+
+
+/* ---------------STYLE DES TITRES DE LA PAGE--------------- */
+h1 /* titre */ {
+  font-family:Arial, Helvetica, sans-serif;
+  color: #FF6600; 
+  text-align: center;
+  text-shadow: 6px 6px 15px orange;
+  background-image: url('image/nebuleuse.jpg');
+  padding: 40px;
+}
+
+h2
+{
+  font-family:Arial, Helvetica, sans-serif ;
+  text-align: center;
+}
+
+/* ---------------STYLE FORMULAIRE --------------- */
+
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.error {
+  color: red;
+  margin-top: 5px;
+}
+
+h2
+{
+  font-family:Arial, Helvetica, sans-serif ;
+  text-align: center;
+}
+
+
+/* test */
+
+
+
+/* Effet de transition de base pour les images */
+img.interactive {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+img.interactive:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  filter: grayscale(100%);
+}
