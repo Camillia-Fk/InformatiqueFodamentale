@@ -1,0 +1,84 @@
+________________________________________________________________________
+A écrire à chaque début de page html : 
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    ...
+  </head>
+  <body>
+    tous les éléments HTML du contenu à afficher sur la page web
+  </body>
+</html>
+________________________________________________________________________
+
+titre : 
+<h1>Titre</h1>
+<h2>Sous-titre</h2>
+<h3>Sous-titre de niveau 3</h3>
+<h4>Sous-titre de niveau 4</h4>
+<h5>Sous-titre de niveau 5</h5>
+<h6>Sous-titre de niveau 6</h6>
+
+
+paragraphe : L'élément paragraphe < p > indique au navigateur d'insérer un paragraphe de texte. Un saut de ligne est automatiquement ajouté avant et après les balises < p > paragraphe < /p >.
+<p>Voici un paragraphe. Tout le texte inclus dans les balises forme le paragraphe.</p>
+<p>Ceci est un nouveau paragraphe.</p>
+AFFICHAGE :
+Voici un paragraphe. Tout le texte inclus dans les balises forme le paragraphe.
+
+Ceci est un nouveau paragraphe.
+
+
+Les listes : 
+liste à puce : <ul> </ul>
+liste numérotée : <ol> </ol>
+Entre les balises de l'élément liste, chaque ligne de la liste, à puces ou à numéros, est codée dans les balises < li > ligne < /li >.
+
+<p>Ingrédients de la pâte à crêpes :</p>
+<ul>
+  <li>Farine</li>
+  <li>Lait</li>
+  <li>Oeufs</li>
+</ul>
+
+
+Les images : 
+<img src="https://assets.codepen.io/6093409/sprocket.svg"/>
+
+balise <img> et attribut <src> pour source, indique au navigateur le chemin pour récupérer l'image à afficher.
+
+
+Les liens : 
+ <a href="https://sudoku.com/fr">jouez au sudoku</a>
+ balise <a> et attribut <srx> pour indiquer l'emplacement de redirection.
+
+
+Elements générique:
+<div> <span>
+ce sont des conteneurs génériques à vocation exclusivement structurante, qui produisent des effets à condition de leur attribuer des propriétés CSS. L'élément div HTML est un élément de bloc alors que l'élément span est un élément en ligne.
+<p>Les <span style="color: #ff7a59;">sous-titres de cette page</span> sont balisés avec l'élément div pour afficher systématiquement la même mise en forme en couleur.</p>
+
+
+AFFICHAGE :
+La partie "sous-titres de cette page" est écrit en rouge. 
+
+
+Les éléments de mise en évidence:
+<em> et <strong> mettent en valeur une portion de texte. L'élément HTML < em > affiche le texte en italique, l'élément HTML < strong > l'affiche en gras.
+
+
+Les attributs : 
+
+L'attribut style personnalise l'apparence par défaut du paragraphe, du texte ou encore de l'image. L'attribut style prend différentes valeurs : text-align, color ou encore font-size. 
+Pour coder un paragraphe HTML en couleur, par exemple, il faut écrire la balise couleur HTML : < p style="color: code couleur" >paragraphe< /p >.
+
+L'attribut id identifie un élément pour lui appliquer une mise en forme spécifique avec CSS. Pour afficher tous les titres en rose, par exemple, il faut renseigner l'attribut id="rose" 
+dans chaque élément de titre, puis indiquer la mise en forme à afficher avec CSS.
+
+L'attribut href renseigne l'emplacement de redirection du lien hypertexte. Il est obligatoire pour faire fonctionner l'élément < a >.
+
+L'attribut src indique la source de l'image. L'élément img contient obligatoirement l'attribut src. Il peut également contenir les attributs : alt text, qui décrit l'image sans en afficher 
+la description, height et width, pour personnaliser la taille de l'image, ou encore title, pour afficher un titre quand l'internaute survole l'image avec le pointeur de sa souris.
+
+L'attribut type de l'élément input détermine le comportement du contrôle interactif input. Lorsqu'il prend la valeur button, par exemple, le navigateur affiche un bouton cliquable ; 
+pour créer une checkbox HTML, il faut renseigner la valeur checkbox : < input type="checkbox" >.
