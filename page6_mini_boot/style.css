@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #e08b8b;
+    text-align: center; /* Centrer le texte horizontalement */
+}
+
+.chatbot-container {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #8BE0B4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chatbot-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.message {
+    margin: 10px 0;
+}
+
+.message.user {
+    text-align: right;
+    color: blue;
+}
+
+.message.bot {
+    text-align: left;
+    color: green;
+}
+
+#user-input {
+    border: solid;
+    padding: 10px;
+    width: calc(100% - 80px);
+}
+
+button {
+    border: none;
+    padding: 10px;
+    background-color: #8BE0B4;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Style pour le conteneur de la liste de questions */
+.questions-list {
+    position: absolute;
+    top: 20px; /* Ajustez pour l'espacement en haut */
+    left: 20px; /* Ajustez pour l'espacement à gauche */
+    background-color: #8BE0B4;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Aligner le texte à gauche */
+
+}

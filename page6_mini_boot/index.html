@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <!-- Inclure le fichier CSS de Bootstrap pour faire une page responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <title>Mini Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="script.js"></script>
+     <!-- Conteneur pour la liste de questions -->
+     <div class="questions-list">
+        <h3>Questions :</h3>
+        <ul>
+            <li>Bonjour</li>
+            <li>Bonsoir</li>
+            <li>De quelle couleur est le ciel ?</li>
+            <li>Combien fait (9*2+8)/25 ?</li>
+            <li>Quel est ton nom ?</li>
+            <li>Quelle heure est-il ?</li>
+            <li>Aurevoir</li>
+        </ul>
+    </div>
+    <!-- Conteneur du chatbot avec une image annimé, un champ de saisie et un bouton -->
+    <div class="chatbot-container">
+        <img src="robot.gif" alt="Robot animé" title="Un robot" class="robot">
+        <div class="chatbot-messages" id="chatbot-messages"></div>
+        <div class="chatbot-input">
+            <input type="text" id="user-input" placeholder="Tapez votre message...">
+            <!--Appel de la fonction sendMessage pour pouvoir récupérer la valeur saisie -->
+            <button onclick="sendMessage()">Envoyer</button>
+        </div>
+    </div>
+</body>
+</html>
