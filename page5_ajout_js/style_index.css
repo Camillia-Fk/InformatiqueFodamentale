@@ -1,0 +1,184 @@
+/* ---------------STYLE DES TABLES ---------------*/
+table {
+  border-collapse: collapse;
+  margin: auto;
+  border: 1px solid black;
+}
+/* ---------------FOND DE LA PAGE ---------------*/
+body {
+  background-color: #e3ebfa;
+  margin: 0; /* Pour éviter des marges par défaut du navigateur */
+  padding: 0;
+}
+
+/* --------------- TABLEAU ---------------*/
+td, th {
+  border: 1px solid black; /* Ajoute des bordures aux cellules */
+  padding: 8px; /* Ajoute une marge intérieure pour l'espace */
+}
+
+th {
+  background-color: rgba(128, 0, 128, 0.5);
+}
+
+/* ---------------STYLE DES TITRES DE LA PAGE--------------- */
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #FF6600;
+  text-align: center;
+  text-shadow: 6px 6px 15px orange;
+  background-image: url('image/nebuleuse.jpg');
+  padding: 40px;
+}
+
+/* Pour les titres */
+h2, h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  transition: color 0.3s ease; /* Ajoute une transition pour les changements de couleur */
+}
+
+/* Styles pour la disposition des éléments flottants */
+
+/* Conteneur principal pour chaque section d'étoile, 
+   utilisé pour contenir les éléments flottants et 
+   empêcher les débordements. */
+.star-container {
+  overflow: auto; /* Crée un nouveau contexte de formatage pour contenir les flottants */
+  margin-bottom: 20px; /* Ajoute un espace entre les différentes sections d'étoiles */
+}
+
+/* Conteneur pour l'image de l'étoile. 
+   L'image flotte à gauche, permettant au texte de se mettre à sa droite. */
+.star-image {
+  float: left; /* Aligne l'image à gauche, permettant aux éléments suivants de ce mettre à côté */
+  margin-right: 20px; /* Espace entre l'image et le texte ou autres éléments */
+  width: 300px; /* Largeur fixe pour l'image et son conteneur */
+}
+
+/* Style pour l'image à l'intérieur de .star-image pour 
+   garantir qu'elle s'adapte à la largeur du conteneur */
+.star-image img {
+  width: 100%; /* L'image prend toute la largeur de son conteneur */
+  height: auto; /* La hauteur s'ajuste proportionnellement à la largeur */
+}
+
+/* Conteneur pour les détails de l'étoile (comme la liste des caractéristiques). 
+   Flotte également à gauche, à côté de l'image. */
+.star-details {
+  float: left; /* Aligne la liste des détails à gauche, à côté de l'image */
+  max-width: calc(100% - 320px); /* Largeur maximale calculée pour occuper l'espace restant 
+                                      à côté de l'image, en tenant compte de la marge */
+}
+
+/* Style pour le conteneur de la vidéo */
+.video-container {
+  /* Utilisation de Flexbox pour centrer la vidéo */
+  display: flex;
+  /* Centre la vidéo horizontalement */
+  justify-content: center;
+  /* Centre la vidéo verticalement */
+  align-items: center;
+}
+
+/* Style pour l'élément vidéo */
+video {
+  /* Limite la largeur maximale de la vidéo à 100% de son conteneur */
+  max-width: 100%;
+  /* Ajuste automatiquement la hauteur pour maintenir les proportions */
+  height: auto;
+}
+
+/* PARTIE RESPONSIVE */
+
+/* Pour les petits écrans, les éléments s'empilent */
+.star-container .row {
+  display: block; /* Assure que chaque élément prend une nouvelle ligne */
+}
+
+.star-image, .star-details {
+  width: 100%; /* Assure que chaque section prend toute la largeur */
+  max-width: 100%; /* Empêche les débordements */
+  margin-bottom: 20px; /* Ajoute de l'espace entre l'image et le texte */
+}
+
+@media (min-width: 768px) {
+  .star-container .row {
+    display: flex; /* Utilise Flexbox pour aligner les éléments côte à côte sur les grands écrans */
+    flex-wrap: nowrap; /* Empêche le retour à la ligne des éléments */
+    align-items: flex-start;
+  }
+
+  .star-image, .star-details {
+    width: 50%; /* Chaque section prend 50% de la largeur */
+    max-width: 50%;
+    margin-bottom: 0; /* Supprime l'espace en bas pour un alignement propre */
+  }
+}
+
+.star-details {
+  margin-top: 20px; /* Ajoute de l'espace en haut sur les petits écrans */
+}
+
+/* Empêcher les débordements horizontaux des sections */
+.star-container,
+.star-image,
+.star-details {
+  overflow: hidden;
+}
+
+/*  */
+
+/* Effet de transition de base pour les images interactives */
+img.interactive {
+  transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease;
+  /* transition: Applique une transition fluide sur les propriétés spécifiées.
+     - transform: Pour les transformations de taille et de rotation.
+     - box-shadow: Pour l'ombre ajoutée autour de l'image.
+     - filter: Pour les effets de filtre comme sepia ou grayscale.
+     - 0.5s: Durée de la transition.
+     - ease: Fonction de transition pour un effet de démarrage et d'arrêt doux. */
+}
+
+/* Effets de survol pour les images interactives */
+img.interactive:hover {
+  transform: scale(1.5) rotate(180deg) !important;
+  /* scale(1.5): Agrandit l'image de 150% de sa taille originale.
+     rotate(180deg): Fait pivoter l'image de 180 degrés.
+     !important: Assure que ces styles ont la priorité sur d'autres règles moins spécifiques. */
+
+  filter: sepia(1) !important;
+  /* sepia(1): Applique un filtre sepia complet, donnant à l'image une teinte brunâtre. */
+
+  border: 5px solid red !important;
+  /* border: Ajoute une bordure rouge de 5 pixels autour de l'image pour la mettre en évidence. */
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  /* box-shadow: Ajoute une ombre portée autour de l'image.
+     - 0 10px 20px: Positionnement et dimension de l'ombre (horizontal, vertical, flou).
+     - rgba(0, 0, 0, 0.3): Couleur de l'ombre en noir avec une opacité de 0.3. */
+}
+
+/* Bouton retour en haut */
+
+#backToTop {
+  position: fixed; /* Position fixe pour qu'il reste visible lors du défilement */
+  bottom: 20px; /* Positionné à 20px du bas de l'écran */
+  right: 20px; /* Positionné à 20px de la droite de l'écran */
+  padding: 10px 20px; /* Ajoute un peu d'espace autour du texte */
+  background-color: #FF6600; /* Couleur de fond orange */
+  color: #FFFFFF; /* Couleur du texte blanche */
+  border: none; /* Supprime la bordure */
+  border-radius: 5px; /* Arrondit les coins */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ajoute une ombre pour un effet de profondeur */
+  cursor: pointer; /* Change le curseur pour indiquer qu'il est cliquable */
+  z-index: 1000; /* Assure que le bouton est au-dessus des autres éléments */
+  display: none; /* Masqué par défaut, apparaît seulement lors du défilement */
+  transition: opacity 0.3s, transform 0.3s; /* Transitions pour une apparence plus douce */
+}
+
+#backToTop:hover {
+  background-color: #e65c00; /* Change la couleur de fond au survol */
+  transform: scale(1.05); /* Légère augmentation de taille au survol */
+  opacity: 0.8; /* Légère transparence pour adoucir l'apparence */
+}

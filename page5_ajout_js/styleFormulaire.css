@@ -1,0 +1,86 @@
+/* Groupe les boutons radio horizontalement et les aligne verticalement au centre */
+.radio-group {
+  display: flex; /* Définit l'agencement en flexbox pour une disposition horizontale */
+  align-items: center; /* Centre les éléments verticalement dans le conteneur flex */
+}
+
+/* Style pour les entrées de type bouton radio à l'intérieur de .radio-group */
+.radio-group input[type="radio"] {
+  margin: 0 5px; /* Ajoute une marge de 5px à gauche et à droite de chaque bouton radio */
+}
+
+/* Définit une police par défaut pour le corps de la page */
+body {
+  font-family: Arial, sans-serif; /* Utilise la police Arial ou sans-serif en fallback */
+}
+
+/* Style du conteneur principal */
+.container {
+  max-width: 600px; /* Limite la largeur du conteneur à 600px */
+  margin: 0 auto; /* Centre le conteneur horizontalement */
+  padding: 20px; /* Ajoute un espace intérieur de 20px */
+  background-color: #f9f9f9; /* Définit une couleur de fond gris clair */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère autour du conteneur */
+  border-radius: 10px; /* Arrondit les coins du conteneur avec un rayon de 10px */
+}
+
+/* Style pour les titres de niveau 1 */
+h1 {
+  text-align: center; /* Centre le texte horizontalement */
+  color: #333; /* Définit la couleur du texte en gris foncé */
+}
+
+/* Style pour les paragraphes à l'intérieur des formulaires */
+form p {
+  margin-bottom: 15px; /* Ajoute une marge inférieure de 15px pour espacer les paragraphes */
+}
+
+/* Style pour les étiquettes des formulaires */
+label {
+  display: block; /* Affiche les étiquettes en tant qu'éléments blocs */
+  margin-bottom: 5px; /* Ajoute une marge inférieure de 5px */
+  color: #555; /* Définit la couleur du texte en gris */
+}
+
+/* Style pour les champs de texte, email et textarea */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%; /* Prend toute la largeur disponible */
+  padding: 10px; /* Ajoute un espace intérieur de 10px */
+  border: 1px solid #ddd; /* Ajoute une bordure de 1px de couleur gris clair */
+  border-radius: 5px; /* Arrondit les coins avec un rayon de 5px */
+  box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur et la hauteur */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Ajoute une transition pour les changements de bordure et d'ombre */
+}
+
+/* Style pour les champs de texte, email et textarea lorsqu'ils sont en focus */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #007bff; /* Change la couleur de la bordure en bleu lors du focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Ajoute une ombre bleue légère */
+}
+
+/* Style pour les champs radio et checkbox */
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 10px; /* Ajoute une marge droite de 10px */
+}
+
+/* Style pour le bouton de soumission */
+input[type="submit"] {
+  width: 100%; /* Prend toute la largeur disponible */
+  padding: 10px 20px; /* Ajoute un espace intérieur de 10px en haut et en bas, 20px à gauche et à droite */
+  background-color: #007bff; /* Définit une couleur de fond bleue */
+  color: #fff; /* Définit la couleur du texte en blanc */
+  border: none; /* Supprime les bordures */
+  border-radius: 5px; /* Arrondit les coins avec un rayon de 5px */
+  cursor: pointer; /* Change le curseur en une main lorsqu'on survole le bouton */
+  transition: background-color 0.3s; /* Ajoute une transition douce pour le changement de couleur de fond */
+}
+
+/* Style pour le bouton de soumission lors du survol */
+input[type="submit"]:hover {
+  background-color: #0056b3; /* Change la couleur de fond en bleu foncé lors du survol */
+}
