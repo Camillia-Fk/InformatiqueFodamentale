@@ -1,11 +1,11 @@
 // Déclaration d'une constante avec les paires questions-réponses
 const responses = {
     "bonjour": "Bonjour ! Comment puis-je vous aider ?",
-    "bonsoir": "Bonsoir ! Souhaitez-vous me poser une question ? ",
-    "de quelle couleur est le ciel ?": "Le ciel est bleu.",
-    "combien fait (9*2+8)/25 ?": "Laissez moi réfléchir ... un instant ... encore une seconde ... 1.04",
-    "quel est ton nom ?": "Je n'ai pas de nom, je suis un chatbot sans nom ! ",
-    "quelle heure est-il ?": "Je suis désolé, je n'ai pas de montre sur moi.",
+    "combien de planetes tournent autour du soleil ?": "Il y a 8 planètes qui tournent autour du Soleil : Mercure, Vénus, la Terre, Mars, Jupiter, Saturne, Uranus et Neptune.",
+    "quel age a le soleil ?": "Le Soleil a environ 4,6 milliards d'années.",
+    "a quel type d'etoile appartient le soleil ?": "Le Soleil est une étoile de type 'naine jaune'.",
+    "quand le soleil mourra-t-il ?": "Le Soleil devrait mourir dans environ 5 milliards d'années. Il deviendra une géante rouge avant de se transformer en une naine blanche.",
+    "combien de temps met la lumiere du soleil pour atteindre la terre ?": "La lumière du Soleil met environ 8 minutes et 20 secondes pour atteindre la Terre.",
     "aurevoir": "Aurevoir et à bientôt",
 };
 
