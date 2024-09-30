@@ -1,0 +1,135 @@
+/* ---------------STYLE DES TABLES ---------------*/
+table {
+  border-collapse: collapse;
+  margin: auto;
+  border: 1px solid black;
+}
+/* ---------------FOND DE LA PAGE ---------------*/
+body
+{
+	background-color: #e3ebfa ;
+}
+
+/* --------------- TABLEAU ---------------*/
+td, th {
+  border: 1px solid black; /* Ajoute des bordures aux cellules */
+  padding: 8px; /* Ajoute une marge intérieure pour l'espace */
+}
+
+th {
+  background-color: rgba(128, 0, 128, 0.5);
+}
+
+
+/* ---------------STYLE DES TITRES DE LA PAGE--------------- */
+h1 /* titre */ {
+  font-family:Arial, Helvetica, sans-serif;
+  color: #FF6600; 
+  text-align: center;
+  text-shadow: 6px 6px 15px orange;
+  background-image: url('image/nebuleuse.jpg');
+  padding: 40px;
+}
+
+h2
+{
+  font-family:Arial, Helvetica, sans-serif ;
+  text-align: center;
+}
+
+
+/* Styles pour la disposition des éléments flottants */
+
+/* Conteneur principal pour chaque section d'étoile, 
+   utilisé pour contenir les éléments flottants et 
+   empêcher les débordements. */
+
+   .star-container {
+    overflow: auto; /* Crée un nouveau contexte de formatage pour contenir les flottants */
+    margin-bottom: 20px; /* Ajoute un espace entre les différentes sections d'étoiles */
+}
+
+/* Conteneur pour l'image de l'étoile. 
+   L'image flotte à gauche, permettant au texte de se mettre à sa droite. */
+
+.star-image {
+    float: left; /* Aligne l'image à gauche, permettant aux éléments suivants de ce mettre à côté */
+    margin-right: 20px; /* Espace entre l'image et le texte ou autres éléments */
+    width: 300px; /* Largeur fixe pour l'image et son conteneur */
+}
+
+/* Style pour l'image à l'intérieur de .star-image pour 
+   garantir qu'elle s'adapte à la largeur du conteneur */
+
+.star-image img {
+    width: 100%; /* L'image prend toute la largeur de son conteneur */
+    height: auto; /* La hauteur s'ajuste proportionnellement à la largeur */
+}
+
+/* Conteneur pour les détails de l'étoile (comme la liste des caractéristiques). 
+   Flotte également à gauche, à côté de l'image. */
+
+.star-details {
+    float: left; /* Aligne la liste des détails à gauche, à côté de l'image */
+    max-width: calc(100% - 320px); /* Largeur maximale calculée pour occuper l'espace restant 
+                                      à côté de l'image, en tenant compte de la marge */
+}
+
+
+/* Style pour le conteneur de la vidéo */
+.video-container {
+  /* Utilisation de Flexbox pour centrer la vidéo */
+  display: flex;
+  /* Centre la vidéo horizontalement */
+  justify-content: center;
+  /* Centre la vidéo verticalement */
+  align-items: center;
+}
+
+/* Style pour l'élément vidéo */
+video {
+  /* Limite la largeur maximale de la vidéo à 100% de son conteneur */
+  max-width: 100%;
+  /* Ajuste automatiquement la hauteur pour maintenir les proportions */
+  height: auto;
+}
+
+/* PARTIE RESPONSIVE */
+
+/* Pour les petits écrans, les éléments s'empilent */
+.star-container .row {
+  display: block; /* Assure que chaque élément prend une nouvelle ligne */
+}
+
+.star-image, .star-details {
+  width: 100%; /* Assure que chaque section prend toute la largeur */
+  max-width: 100%; /* Empêche les débordements */
+  margin-bottom: 20px; /* Ajoute de l'espace entre l'image et le texte */
+}
+
+@media (min-width: 768px) {
+  .star-container .row {
+      display: flex; /* Utilise Flexbox pour aligner les éléments côte à côte sur les grands écrans */
+      flex-wrap: nowrap; /* Empêche le retour à la ligne des éléments */
+      align-items: flex-start;
+  }
+
+  .star-image, .star-details {
+      width: 50%; /* Chaque section prend 50% de la largeur */
+      max-width: 50%;
+      margin-bottom: 0; /* Supprime l'espace en bas pour un alignement propre */
+  }
+}
+
+.star-details {
+  margin-top: 20px; /* Ajoute de l'espace en haut sur les petits écrans */
+}
+
+/* Empêcher les débordements horizontaux des sections */
+.star-container,
+.star-image,
+.star-details {
+    overflow: hidden;
+}
+
+
